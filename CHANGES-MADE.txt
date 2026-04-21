@@ -1,0 +1,12 @@
+CogniCare 2.0 update summary
+
+1. Repositioned the project as a health-tech SaaS style product instead of a college quiz interface.
+2. Rebuilt the landing page, feature page, dashboard, auth pages, result page, and test screens with a premium modern UI.
+3. Added a dedicated assessment history page to make the experience feel product-grade.
+4. Improved dashboard summary cards, circular progress state, and final report generation flow.
+5. Preserved stable localStorage-based score persistence and resume-safe workflow.
+6. Added reusable theme system and shared test styling for consistency across all modules.
+7. Upgraded result page into a structured cognitive summary with recommendations and risk visualization.
+8. Added local assessment history storage for demo-ready report retention.
+9. Removed intrusive alert popups and made completion flow cleaner.
+10. Kept the frontend backend-ready for future integration with Firebase, Supabase, Node.js, or Python APIs.

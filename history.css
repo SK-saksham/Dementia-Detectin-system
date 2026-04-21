@@ -1,0 +1,13 @@
+.history-shell { margin: 20px auto 14px; padding: 28px; border-radius: 32px; }
+.history-top { display:grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
+.history-top h1 { margin: 12px 0 10px; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.04; }
+.history-actions { display:flex; gap: 12px; flex-wrap: wrap; }
+.history-list { display:grid; gap: 16px; margin-top: 24px; }
+.history-card { padding: 22px; border-radius: 22px; }
+.history-card h3 { margin: 0 0 8px; }
+.history-card p { color: var(--muted); margin: 0; line-height: 1.65; }
+.history-meta { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+.history-chip { padding: 9px 12px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); font-size: 13px; color: var(--muted); }
+.empty-state { padding: 28px; border-radius: 24px; text-align: center; }
+@media (max-width: 860px) { .history-top { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .history-shell, .history-card, .empty-state { padding: 20px; } }

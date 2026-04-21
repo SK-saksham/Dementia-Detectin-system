@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CogniCare 2.0 | Cognitive Summary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="final-result.css">
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>CogniCareAuth.checkAuth();</script>
+  <main class="result-shell container-shell glass">
+    <section class="result-top"><div class="top-copy"><span class="eyebrow">Assessment summary</span><h1>Structured cognitive screening report</h1><p class="muted">A polished product-style summary for demos, judges, caregivers, and future clinician workflows.</p></div><div class="top-actions"><a href="history.html" class="ghost-btn">History</a><button class="home-btn" onclick="goHome()">Dashboard</button></div></section>
+    <section class="hero-score card"><div class="score-left"><span class="eyebrow">Overall performance</span><div class="score-value" id="totalScore">0/19</div><p id="scoreMeta" class="muted"></p><div id="riskLevel" class="risk safe">Low Cognitive Risk</div></div><div class="score-right"><div class="risk-ring" id="riskRing"><span id="riskPercent">0%</span></div></div></section>
+    <section class="result-grid"><article class="domain-section card"><h2>Domain breakdown</h2><ul id="domainList"></ul></article><article class="interpretation card"><h2>Clinical-style interpretation</h2><p id="interpretationText"></p><div class="info-row"><span>Completed at</span><strong id="completedAt"></strong></div></article></section>
+    <section class="recommendation-grid"><article class="card rec-card"><h3>Recommended next steps</h3><ul id="recommendationList"></ul></article><article class="card disclaimer"><h3>Important note</h3><p>This interface is an awareness-oriented screening prototype. It is not a diagnostic tool and should not replace evaluation by a qualified medical professional.</p></article></section>
+  </main>
+  <footer class="site-footer"><p>CogniCare 2.0 · Report view</p></footer>
+  <script src="storage.js"></script>
+  <script src="auth.js"></script>
+  <script src="final-result.js"></script><!-- CACHE_BUST_31_MAR -->
+</body>
+</html>

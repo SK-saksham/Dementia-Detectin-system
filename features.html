@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CogniCare 2.0 | Product Modules</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="features.css">
+  <script src="auth.js"></script>
+</head>
+<body>
+  <script>CogniCareAuth.checkAuth();</script>
+  <section class="feature-hero container-shell">
+    <div class="hero-copy glass"><span class="eyebrow">Product modules</span><h1>A more believable SaaS architecture for CogniCare</h1><p class="muted">This version is structured like a real digital product with public pages, authenticated workspace, guided assessments, and a professional report layer.</p><div class="hero-actions"><a href="exam.html" class="primary-btn">Open Dashboard</a><a href="history.html" class="ghost-btn">Assessment History</a><button onclick="CogniCareAuth.logout()" class="ghost-btn" style="color: #ff4d4d; border-color: #ff4d4d22; margin-left:10px;">Log Out</button></div></div>
+    <div class="hero-side glass"><div class="side-chip">Public Site</div><div class="side-chip">Assessment Hub</div><div class="side-chip">Risk Analytics</div><div class="side-chip">History Layer</div><div class="side-chip">Backend-Ready</div></div>
+  </section>
+  <section class="module-section container-shell"><div class="module-grid"><article class="module-card card featured"><h3>Assessment Workspace</h3><p>Sequential domain-based workflow with progress indicators, lock states, and report generation.</p><a href="exam.html">Launch workspace →</a></article><article class="module-card card"><h3>Report Engine</h3><p>Transforms test outcomes into a clean summary with risk band, interpretation, and next-step recommendations.</p></article><article class="module-card card"><h3>History Module</h3><p>Stores previous screening records locally today and can later connect to user accounts and cloud storage.</p></article><article class="module-card card"><h3>User Access Layer</h3><p>Professional login and register screens create the impression of a deployable health-tech product.</p></article><article class="module-card card"><h3>Future Doctor View</h3><p>Ready to expand into a clinician dashboard for reviewing results, trends, and follow-up cases.</p></article><article class="module-card card"><h3>Cloud Integration Vision</h3><p>Designed so Firebase, Supabase, Node, or Python APIs can replace local storage later.</p></article></div></section>
+  <section class="architecture-section container-shell"><div class="architecture-card glass"><span class="eyebrow">Suggested backend map</span><div class="api-grid"><div><strong>POST</strong><span>/api/auth/login</span></div><div><strong>POST</strong><span>/api/auth/register</span></div><div><strong>POST</strong><span>/api/assessments/start</span></div><div><strong>POST</strong><span>/api/assessments/save-domain</span></div><div><strong>GET</strong><span>/api/assessments/latest-report</span></div><div><strong>GET</strong><span>/api/assessments/history</span></div></div></div></section>
+  <footer class="site-footer"><p>CogniCare 2.0 · Product modules and architecture view</p></footer><!-- CACHE_BUST_31_MAR -->
+</body>
+</html>

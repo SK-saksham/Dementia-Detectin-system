@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CogniCare 2.0 | Register</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="register.css"></head><body><main class="auth-shell container-shell"><section class="auth-panel glass"><div class="auth-copy"><span class="eyebrow">Create workspace</span><h1>Set up a CogniCare account</h1><p class="muted">Join CogniCare to securely track screening progress and access professional cognitive reports.</p></div><form class="auth-form card" id="registerForm"><label>Email</label><input type="email" id="email" placeholder="alex@clinic.ai" required><label>Password</label><input type="password" id="password" placeholder="Create password" required><button type="submit" class="primary-btn" id="submitBtn">Create Account</button><div id="errorMessage" style="color: #ff4d4d; margin-top: 10px; font-size: 0.9em; display: none;"></div><p class="helper">Secure signup · your data is protected and private.</p><a href="login.html" class="ghost-btn full">Already have an account</a></form></section></main><script src="auth.js"></script><script>
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const submitBtn = document.getElementById('submitBtn');
+    const errorEl = document.getElementById('errorMessage');
+
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Creating account...';
+    errorEl.style.display = 'none';
+
+    try {
+        await CogniCareAuth.register(email, password);
+        // Automatically log in after registration
+        await CogniCareAuth.login(email, password);
+        window.location.href = 'exam.html';
+    } catch (err) {
+        errorEl.innerText = err.message || 'Registration failed. Try a different email.';
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Create Account';
+    }
+});
+</script></body></html>

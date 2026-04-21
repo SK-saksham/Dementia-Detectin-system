@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CogniCare 2.0 | Assessment Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="exam.css">
+</head>
+<body><script src="auth.js"></script><script>CogniCareAuth.checkAuth();</script>
+  <section class="workspace-shell container-shell">
+    <header class="workspace-hero glass">
+      <div class="hero-left"><span class="eyebrow">Assessment workspace</span><h1>Digital cognitive screening dashboard</h1><p class="muted">Run six guided domain tests, preserve progress, generate a structured report, and review assessment history like a real health-tech product.</p><div class="hero-actions"><a href="landing.html" class="ghost-btn">Public Site</a><a href="history.html" class="secondary-btn">View History</a><button onclick="CogniCareAuth.logout()" class="ghost-btn" style="color: #ff4d4d; border-color: #ff4d4d22;">Log Out</button></div></div>
+      <div class="hero-right"><div class="summary-card card"><span>Latest state</span><strong id="statusHeadline">Assessment in progress</strong><p id="statusSubtext">Complete all modules to unlock the final cognitive summary.</p></div><div class="summary-grid"><div class="metric-box card"><span>Modules done</span><strong id="doneCount">0 / 6</strong></div><div class="metric-box card"><span>Readiness</span><strong id="progressPercent">0%</strong></div></div></div>
+    </header>
+
+    <section class="overview-grid"><article class="progress-panel glass"><div class="panel-head"><div><span class="eyebrow">Assessment progress</span><h2>Complete all six modules</h2></div><div class="progress-circle" id="progressCircle"><span id="progressText">0%</span></div></div><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div><div class="quick-notes"><div class="note-chip">Resume-safe storage</div><div class="note-chip">Sequential module unlock</div><div class="note-chip">Report-ready output</div></div></article><article class="analytics-panel glass"><span class="eyebrow">Workspace info</span><div class="analytics-list"><div><strong>6</strong><span>Cognitive domains</span></div><div><strong>19</strong><span>Total possible score</span></div><div><strong>1</strong><span>Final report engine</span></div></div><p class="muted small">This screening experience is for awareness and demo purposes. It does not replace medical diagnosis.</p></article></section>
+
+    <section class="module-grid" id="assessmentGrid">
+      <article class="exam-card card"><span class="status-badge">Not Started</span><div class="card-icon">🧠</div><h2>Memory</h2><p class="exam-desc">Word recall, image recognition, and reverse-sequence retention.</p><ul><li>Recall task</li><li>Visual recognition</li><li>Reverse recall</li></ul><p class="score-text" id="memoryScoreText"></p><button class="btn-primary" id="memoryBtn">Start Module</button></article>
+      <article class="exam-card card"><span class="status-badge">Not Started</span><div class="card-icon">🎯</div><h2>Attention</h2><p class="exam-desc">Focus span, response control, and timed concentration.</p><ul><li>Target detection</li><li>Odd-one-out</li><li>Timed response</li></ul><p class="score-text" id="attentionScoreText"></p><button class="btn-primary locked" id="attentionBtn" disabled>Locked</button></article>
+      <article class="exam-card card"><span class="status-badge">Not Started</span><div class="card-icon">🧩</div><h2>Executive</h2><p class="exam-desc">Pattern logic, planning, and reasoning ability.</p><ul><li>Series logic</li><li>Pattern understanding</li><li>Rule-based thinking</li></ul><p class="score-text" id="executiveScoreText"></p><button class="btn-primary locked" id="executiveBtn" disabled>Locked</button></article>
+      <article class="exam-card card"><span class="status-badge">Not Started</span><div class="card-icon">🗣️</div><h2>Language</h2><p class="exam-desc">Comprehension, semantics, and sentence understanding.</p><ul><li>Meaning</li><li>Context</li><li>Synonyms</li></ul><p class="score-text" id="languageScoreText"></p><button class="btn-primary locked" id="languageBtn" disabled>Locked</button></article>
+      <article class="exam-card card highlight"><span class="status-badge">Not Started</span><div class="card-icon">🧭</div><h2>Orientation</h2><p class="exam-desc">Awareness of day, date, month, and context.</p><ul><li>Day</li><li>Date & month</li><li>Context awareness</li></ul><p class="score-text" id="orientationScoreText"></p><button class="btn-primary locked" id="orientationBtn" disabled>Locked</button></article>
+      <article class="exam-card card"><span class="status-badge">Not Started</span><div class="card-icon">🖼️</div><h2>Visuospatial</h2><p class="exam-desc">Shape interpretation, direction, and spatial reasoning.</p><ul><li>Shape matching</li><li>Clock understanding</li><li>Direction logic</li></ul><p class="score-text" id="visualScoreText"></p><button class="btn-primary locked" id="visualBtn" disabled>Locked</button></article>
+    </section>
+
+    <section class="action-row"><button class="back-btn" onclick="goBack()">← Back</button><a href="history.html" class="ghost-btn">Open Assessment History</a></section>
+    <section class="final-submit-wrapper glass"><h2>Generate final cognitive summary</h2><p>Once all modules are complete, create a structured report with total score, domain breakdown, and recommendations.</p><button class="final-submit-btn">Generate Report</button></section>
+  </section>
+  <footer class="site-footer"><p>CogniCare 2.0 · Assessment workspace</p></footer>
+  <script src="storage.js"></script>
+  <script src="exam-hub.js"></script><!-- CACHE_BUST_31_MAR -->
+</body>
+</html>

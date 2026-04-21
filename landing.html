@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CogniCare 2.0 | AI-Assisted Cognitive Screening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="landing.css" /></head><body><script src="auth.js"></script>
+  <header class="nav-wrap container-shell glass">
+    <div class="brand"><div class="logo-mark">◎</div><div><strong>CogniCare 2.0</strong><p>Digital cognitive screening workspace</p></div></div>
+    <nav class="nav-links"><a href="#platform">Platform</a><a href="#workflow">Workflow</a><a href="#trust">Trust</a><a href="#vision">Vision</a></nav>
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="ghost-btn">Login</a>
+      <a href="exam.html" class="primary-btn">Open App</a>
+    </div>
+  </header>
+  <script>
+    if (CogniCareAuth.isAuthenticated()) {
+      document.getElementById('navActions').innerHTML = `
+        <button onclick="CogniCareAuth.logout()" class="ghost-btn">Logout</button>
+        <a href="exam.html" class="primary-btn">Go to Dashboard</a>
+      `;
+    }
+  </script>
+
+  <main>
+    <section class="hero container-shell" id="platform">
+      <div class="hero-copy glass">
+        <span class="eyebrow">AI-assisted screening</span>
+        <h1>Built to look like a real digital health SaaS, not a college project.</h1>
+        <p class="hero-text">CogniCare 2.0 presents a premium product experience for guided cognitive screening, modular domain testing, risk visualization, and report-ready assessment summaries.</p>
+        <div class="hero-actions"><a href="exam.html" class="primary-btn">Launch Assessment Workspace</a><a href="features.html" class="ghost-btn">See Product Modules</a></div>
+        <div class="hero-mini-stats"><div><strong>6</strong><span>screening domains</span></div><div><strong>19</strong><span>total points</span></div><div><strong>1</strong><span>report engine</span></div></div>
+      </div>
+      <div class="hero-visual glass">
+        <div class="halo halo-a"></div><div class="halo halo-b"></div>
+        <div class="brain-card card main-visual"><p>System Overview</p><h3>Realtime cognitive readiness map</h3><div class="brain-grid"><span>Memory</span><span>Attention</span><span>Executive</span><span>Language</span><span>Orientation</span><span>Visuospatial</span></div></div>
+        <div class="metric-card card metric-one"><span>Assessment state</span><strong>Resume-safe architecture</strong></div>
+        <div class="metric-card card metric-two"><span>Deployment direction</span><strong>Backend-ready frontend</strong></div>
+      </div>
+    </section>
+
+    <section class="section container-shell" id="workflow">
+      <div class="section-head"><span class="eyebrow">Workflow design</span><h2>Built around a real product journey</h2><p class="muted">Entry, dashboard, guided assessment, report generation, and assessment history now work like a believable platform.</p></div>
+      <div class="workflow-grid">
+        <div class="workflow-card card"><span>01</span><h3>Entry & trust</h3><p>Landing, positioning, and platform messaging instantly explain what the product does.</p></div>
+        <div class="workflow-card card"><span>02</span><h3>Assessment workspace</h3><p>Users enter a dashboard that feels like a health-tech app, not a list of random pages.</p></div>
+        <div class="workflow-card card"><span>03</span><h3>Guided modules</h3><p>Each domain test has a clean timed structure, progress cues, and consistent interaction patterns.</p></div>
+        <div class="workflow-card card"><span>04</span><h3>Clinical-style summary</h3><p>Results appear as a product report with risk band, interpretation, and next-step recommendations.</p></div>
+      </div>
+    </section>
+
+    <section class="section container-shell trust-section" id="trust">
+      <div class="trust-copy glass"><span class="eyebrow">Trust signals</span><h2>Professional framing for judges, demos, and future investors</h2><ul><li>Privacy-first messaging and secure workflow placeholders</li><li>Non-diagnostic language that sounds clinically responsible</li><li>Report-ready interface for users, caregivers, and doctors</li><li>Future modules for history, analytics, and admin tools</li></ul></div>
+      <div class="trust-stacks"><div class="stack-card card"><span>Platform fit</span><strong>Health-tech SaaS demo</strong><p>Designed to look market-ready even before backend integration.</p></div><div class="stack-card card"><span>Competition angle</span><strong>Real-world product story</strong><p>Judges can immediately see scalability, users, and future revenue potential.</p></div></div>
+    </section>
+
+    <section class="section container-shell pricing-section" id="vision">
+      <div class="section-head narrow"><span class="eyebrow">Product vision</span><h2>How this can evolve into a real SaaS business</h2></div>
+      <div class="pricing-grid"><div class="pricing-card card"><h3>Clinic plan</h3><p>Multi-patient dashboard, secure history, and printable report generation.</p></div><div class="pricing-card card"><h3>Caregiver plan</h3><p>Simple guided assessments, reminders, and health trend summaries.</p></div><div class="pricing-card card"><h3>Enterprise / NGO</h3><p>Community screening programs with analytics and centralized risk monitoring.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© 2026 CogniCare 2.0 · Demo-ready SaaS presentation layer</p></footer>
+</body>
+</html>

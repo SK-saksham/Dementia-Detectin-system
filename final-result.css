@@ -1,0 +1,26 @@
+.result-shell { margin: 20px auto 14px; padding: 28px; border-radius: 32px; }
+.result-top, .hero-score, .result-grid, .recommendation-grid { display:grid; gap: 20px; }
+.result-top { grid-template-columns: 1fr auto; align-items: center; }
+.top-copy h1 { font-size: clamp(2rem, 4vw, 3.8rem); margin: 12px 0 10px; line-height: 1.04; }
+.top-actions { display:flex; gap: 12px; flex-wrap: wrap; }
+.hero-score { grid-template-columns: 1.05fr .95fr; margin-top: 20px; }
+.score-left, .score-right, .domain-section, .interpretation, .rec-card, .disclaimer { padding: 24px; border-radius: 24px; }
+.score-value { font-size: clamp(2.8rem, 5vw, 4.4rem); font-weight: 900; margin: 10px 0; }
+.risk { display: inline-flex; padding: 10px 14px; border-radius: 999px; font-weight: 800; margin-top: 10px; }
+.risk.safe { background: rgba(77,225,180,.14); color: var(--success); }
+.risk.moderate { background: rgba(255,203,107,.14); color: var(--warning); }
+.risk.high { background: rgba(255,125,125,.14); color: var(--danger); }
+.score-right { display:grid; place-items:center; }
+.risk-ring { width: 200px; height: 200px; border-radius: 50%; display:grid; place-items:center; background: conic-gradient(var(--primary) 0deg, rgba(255,255,255,.08) 0deg); position: relative; }
+.risk-ring::before { content: ""; position: absolute; inset: 16px; border-radius: 50%; background: rgba(8,14,27,.95); }
+.risk-ring span { position: relative; z-index: 1; font-size: 1.8rem; font-weight: 900; }
+.result-grid { grid-template-columns: 1.05fr .95fr; margin-top: 20px; }
+#domainList { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; }
+#domainList li { display:flex; justify-content: space-between; gap: 14px; padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
+#domainList span:last-child { color: var(--muted); }
+.interpretation p, .disclaimer p, .rec-card li { color: var(--muted); line-height: 1.75; }
+.info-row { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); display:flex; justify-content: space-between; gap: 12px; }
+.recommendation-grid { grid-template-columns: 1fr 1fr; margin-top: 20px; }
+#recommendationList { margin: 14px 0 0; padding-left: 18px; }
+@media (max-width: 900px) { .result-top, .hero-score, .result-grid, .recommendation-grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .result-shell, .score-left, .score-right, .domain-section, .interpretation, .rec-card, .disclaimer { padding: 20px; } .top-actions { width: 100%; } }
