@@ -10,8 +10,14 @@ const CogniCareAuth = (function () {
   }
 
   function clearToken() {
-    localStorage.removeItem("cognicare_access_token");
-    localStorage.removeItem("cognicare_user_email");
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith("cognicare_")) {
+        keysToRemove.push(key);
+      }
+    }
+    keysToRemove.forEach(k => localStorage.removeItem(k));
   }
 
   function isAuthenticated() {
@@ -34,6 +40,7 @@ const CogniCareAuth = (function () {
   }
 
   async function login(email, password) {
+    clearToken();
     const response = await fetch(`${API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
